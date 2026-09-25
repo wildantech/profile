@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090b0a">
+  <meta name="description" content="CV digital Wildan Ulul Aufa, Teknik Komputer dengan proyek IoT, aplikasi web, Android, dan pengalaman magang.">
+  <title>Wildan Ulul Aufa — CV & Portofolio</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --black: #090b0a;
+      --panel: #141715;
+      --panel-2: #1b1f1c;
+      --line: #292e2a;
+      --white: #f4f5f1;
+      --muted: #a4aaa4;
+      --quiet: #737c75;
+      --green: #62ed00;
+      --green-soft: #a7df73;
+      --content: 1100px;
+      --sans: "Aptos", "Segoe UI", Arial, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--black); color: var(--white); font: 15px/1.65 var(--sans); }
+    a { color: inherit; }
+    .shell { width: min(var(--content), calc(100% - 64px)); margin: auto; }
+    .topbar { padding-top: 12px; }
+    .nav { min-height: 54px; position: relative; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 0 24px; border: 1px solid #202421; border-radius: 4px; background: #171a18; }
+    .brand { display: flex; align-items: center; gap: 9px; text-decoration: none; }
+    .brand-mark { width: 25px; height: 25px; display: grid; place-items: center; background: var(--green); color: #0b1007; font-size: 9px; font-weight: 800; }
+    .brand-name { font-size: 12px; font-weight: 700; }
+    .nav-links { display: flex; align-items: center; gap: 30px; }
+    .nav-links a { color: #adb3ae; font-size: 11px; text-decoration: none; }
+    .nav-links a:hover, .nav-links a:focus-visible { color: var(--green-soft); }
+    .nav-right { display: flex; align-items: center; gap: 24px; }
+    .nav-tools { display: flex; gap: 8px; }
+    .menu-toggle { display: none; }
+    .icon-link, .print-button, .menu-toggle { min-height: 32px; display: inline-flex; align-items: center; justify-content: center; padding: 0 10px; border: 1px solid #343a35; border-radius: 3px; background: transparent; color: var(--muted); font: inherit; font-size: 11px; text-decoration: none; cursor: pointer; }
+    .icon-link:hover, .print-button:hover, .menu-toggle:hover { border-color: var(--green); color: var(--green-soft); }
+    .hero { min-height: 426px; display: grid; grid-template-columns: 1.35fr .65fr; align-items: center; gap: 38px; padding: 50px 48px 42px; border-bottom: 1px solid var(--line); }
+    .eyebrow, .section-kicker { margin: 0 0 11px; color: var(--green); font-size: 10px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+    h1 { max-width: 640px; margin: 0; font-size: 52px; font-weight: 650; line-height: 1.08; }
+    .hero-title { margin: 12px 0 0; color: #dce2dc; font-size: 15px; font-weight: 500; }
+    .hero-copy { max-width: 525px; margin: 12px 0 0; color: var(--muted); font-size: 13px; }
+    .hero-status { margin-top: 13px; color: var(--quiet); font-size: 11px; }
+    .hero-status strong { color: var(--muted); font-weight: 500; }
+    .hero-actions { display: flex; align-items: center; gap: 17px; margin-top: 23px; }
+    .button-primary { min-height: 40px; display: inline-flex; align-items: center; padding: 0 16px; border: 1px solid var(--green); border-radius: 3px; background: #49aa00; box-shadow: 0 0 22px rgb(92 211 0 / 15%); color: white; font-size: 11px; font-weight: 700; text-decoration: none; transition: transform .2s ease, box-shadow .25s ease, background .25s ease; }
+    .button-primary:hover, .button-primary:focus-visible { background: #4b9d00; }
+    .hero-link { color: #c0c7c0; font-size: 11px; text-decoration-color: #626b63; text-underline-offset: 4px; }
+    .portrait-wrap { width: 224px; aspect-ratio: 1; justify-self: center; position: relative; padding: 7px; border: 1px solid #36443a; border-radius: 50%; background: #101411; animation: portrait-float 6s ease-in-out infinite, portrait-glow 5s ease-in-out infinite; }
+    .portrait-wrap::after { content: ""; width: 13px; height: 13px; position: absolute; right: 14px; bottom: 27px; border: 3px solid var(--black); border-radius: 50%; background: var(--green); }
+    .portrait { width: 100%; height: 100%; display: block; border-radius: 50%; object-fit: cover; object-position: 78% 38%; filter: saturate(.78); transition: transform .35s ease; }
+    .portrait-wrap:hover .portrait { transform: scale(1.035); }
+    .focus-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; padding: 18px 20px 10px; }
+    .focus-item { padding: 17px 21px; color: var(--muted); font-size: 11px; }
+    .focus-item strong { display: block; margin-bottom: 2px; color: var(--white); font-size: 12px; font-weight: 600; }
+    .section { padding: 65px 0; }
+    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 28px; margin-bottom: 23px; }
+    h2 { margin: 0; font-size: 26px; font-weight: 600; line-height: 1.2; }
+    .section-note { max-width: 435px; margin: 0; color: var(--muted); font-size: 11px; }
+    .feature-project { display: grid; grid-template-columns: .9fr 1.1fr; min-height: 350px; overflow: hidden; border: 1px solid #303631; border-radius: 4px; background: var(--panel); }
+    .feature-visual { min-height: 350px; overflow: hidden; background: #101311; }
+    .feature-visual img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: center 55%; }
+    .feature-copy { align-self: center; padding: 30px 35px; }
+    .project-label { margin: 0 0 7px; color: var(--green-soft); font-size: 9px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+    h3 { margin: 0; font-size: 20px; font-weight: 600; line-height: 1.3; }
+    .project-copy p, .feature-copy p:not(.project-label) { margin: 10px 0 0; color: var(--muted); font-size: 11px; }
+    .feature-meta { display: grid; grid-template-columns: 83px 1fr; gap: 6px 12px; margin: 18px 0 0; padding-top: 13px; font-size: 10px; }
+    .feature-meta dt { color: var(--quiet); }
+    .feature-meta dd { margin: 0; color: #d4d9d3; }
+    .project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 14px; }
+    .project-card { min-width: 0; overflow: hidden; border: 1px solid #303631; border-radius: 4px; background: var(--panel); transition: transform .28s ease, border-color .28s ease, box-shadow .28s ease; }
+    .project-card:hover { transform: translateY(-4px); border-color: #53664a; box-shadow: 0 12px 30px rgb(0 0 0 / 24%); }
+    .project-visual { height: 218px; display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; gap: 2px; overflow: hidden; background: #090b0a; }
+    .project-visual.single { grid-template-columns: 1fr; background: #f1f3f4; }
+    .project-visual img { width: 100%; height: 100%; min-width: 0; display: block; object-fit: cover; object-position: center; }
+    .project-visual.single img { object-fit: contain; }
+    .project-visual.devices { height: 300px; grid-template-columns: minmax(0, 1fr) .44fr; align-items: center; gap: 16px; padding: 14px 17px; }
+    .project-visual.devices .desktop-screen { width: 100%; height: auto; max-height: 260px; object-fit: contain; border-radius: 3px; background: #f1f3f4; }
+    .phone-shell { width: auto; max-width: 100%; height: 100%; max-height: 272px; aspect-ratio: 720 / 1600; justify-self: center; overflow: hidden; border: 2px solid #363b37; border-radius: 13px; background: #050605; box-shadow: 0 8px 24px rgb(0 0 0 / 32%); }
+    .phone-shell img { width: 100%; height: 100%; object-fit: contain !important; background: #050605; }
+    .project-visual.phones { height: 300px; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: center; gap: 18px; padding: 14px 24px; }
+    .project-visual.phones .phone-shell { max-width: 142px; }
+    .project-copy { padding: 20px 22px 22px; }
+    .project-copy h3 { font-size: 17px; }
+    .project-stack { margin-top: 13px; color: var(--green-soft); font-size: 10px; font-weight: 600; }
+    .profile-grid { display: grid; grid-template-columns: .72fr 1.28fr; gap: 65px; }
+    .profile-lead { margin: 0; color: #e0e5df; font-size: 18px; font-weight: 500; line-height: 1.5; }
+    .profile-body { margin: 10px 0 0; color: var(--muted); font-size: 11px; }
+    .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .skill-group { padding-top: 0; }
+    .skill-group h3 { margin-bottom: 8px; color: var(--green-soft); font-size: 12px; }
+    .skill-group p { margin: 0; color: var(--muted); font-size: 10px; line-height: 1.9; }
+    .education-row { display: grid; grid-template-columns: 140px 1fr; gap: 25px; padding: 4px 0; }
+    .education-year { color: var(--green-soft); font-size: 11px; font-weight: 700; }
+    .education-row h3 { font-size: 13px; }
+    .education-row p { margin: 3px 0 0; color: var(--muted); font-size: 10px; }
+    .education-status { display: inline-block; margin-top: 8px; color: var(--green-soft); font-size: 10px; }
+    .contact { padding: 52px 0 58px; display: grid; grid-template-columns: .8fr 1.2fr; gap: 38px; }
+    .contact h2 { max-width: 360px; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 22px; }
+    .contact-item { padding-top: 0; }
+    .contact-item span { display: block; color: var(--quiet); font-size: 9px; }
+    .contact-item strong, .contact-item a { color: var(--white); font-size: 11px; font-weight: 500; text-decoration-color: #677168; text-underline-offset: 3px; }
+    .contact-item a:hover { color: var(--green-soft); }
+    footer { padding: 14px 20px; color: var(--quiet); text-align: center; font-size: 9px; }
+    :focus-visible { outline: 2px solid var(--green); outline-offset: 3px; }
+    @keyframes portrait-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+    @keyframes portrait-glow { 0%, 100% { box-shadow: 0 0 22px rgb(98 237 0 / 9%); } 50% { box-shadow: 0 0 36px rgb(98 237 0 / 22%); } }
+    .motion-ready .reveal { opacity: 0; transform: translateY(16px); transition: opacity .65s ease, transform .65s cubic-bezier(.2,.7,.25,1); }
+    .motion-ready .reveal.is-visible { opacity: 1; transform: translateY(0); }
+    @media (max-width: 760px) {
+      .shell { width: min(100% - 36px, var(--content)); }
+      .nav { min-height: 52px; padding: 0 12px; }
+      .nav-right { gap: 6px; }
+      .menu-toggle { display: inline-flex; }
+      .nav-right { gap: 8px; }
+      .nav-links { display: none; position: absolute; z-index: 4; top: calc(100% + 8px); left: 0; right: 0; padding: 8px; flex-direction: column; gap: 3px; border: 1px solid var(--line); border-radius: 4px; background: #171a18; box-shadow: 0 12px 28px rgb(0 0 0 / 35%); }
+      .nav-links.is-open { display: flex; }
+      .nav-links a { padding: 10px 11px; border-radius: 3px; }
+      .nav-links a:hover, .nav-links a:focus-visible { background: #222723; }
+      .hero { min-height: 0; grid-template-columns: 1fr; gap: 24px; padding: 48px 0 34px; }
+      .portrait-wrap { grid-row: 1; width: 174px; justify-self: start; }
+      h1 { font-size: 42px; }
+      .hero-copy { max-width: 570px; }
+      .focus-item { padding: 13px 10px; font-size: 9px; }
+      .focus-item strong { font-size: 10px; }
+      .section { padding: 48px 0; }
+      .section-head { display: block; }
+      .section-note { margin-top: 9px; }
+      h2 { font-size: 23px; }
+      .feature-project { grid-template-columns: 1fr; }
+      .feature-visual { min-height: 250px; height: 250px; }
+      .feature-copy { padding: 22px; }
+      .project-grid { grid-template-columns: 1fr; gap: 12px; }
+      .project-visual { height: 235px; }
+      .project-visual.devices { height: 420px; grid-template-columns: 1fr; grid-template-rows: 170px 1fr; justify-items: center; gap: 9px; padding: 12px; }
+      .project-visual.devices .desktop-screen { width: 100%; height: 100%; max-height: none; }
+      .project-visual.devices .phone-shell { height: 220px; max-height: 100%; }
+      .project-visual.phones { height: 310px; gap: 12px; padding: 12px 20px; }
+      .phone-shell { max-height: 280px; }
+      .project-copy { padding: 18px; }
+      .profile-grid { grid-template-columns: 1fr; gap: 14px; }
+      .profile-lead { font-size: 16px; }
+      .skills-grid { grid-template-columns: 1fr; gap: 18px; }
+      .education-row { grid-template-columns: 1fr; gap: 2px; }
+      .contact { grid-template-columns: 1fr; gap: 18px; padding: 44px 0; }
+    }
+    @media (max-width: 420px) {
+      .brand-name { font-size: 10px; }
+      .nav-tools { gap: 5px; }
+      .icon-link, .print-button, .menu-toggle { min-height: 30px; padding: 0 7px; font-size: 9px; }
+      h1 { font-size: 35px; }
+      .hero-title { font-size: 13px; }
+      .hero-actions { gap: 12px; }
+      .focus-item { padding: 11px 7px; font-size: 8px; }
+      .focus-item strong { font-size: 9px; }
+      .project-visual.devices { height: 385px; grid-template-rows: 150px 1fr; }
+      .project-visual.devices .phone-shell { height: 205px; }
+      .project-visual.phones { height: 285px; }
+      .project-visual.phones { gap: 6px; padding: 10px; }
+      .phone-shell { max-height: 246px; }
+      .feature-meta { grid-template-columns: 72px 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+    @media print {
+      :root { color-scheme: light; --black: #fff; --panel: #fff; --panel-2: #f2f4f1; --line: #cbd1cc; --white: #1b211c; --muted: #4f5851; --quiet: #626a64; --green: #397c13; --green-soft: #397c13; }
+      body { background: white; color: #1b211c; font-size: 10pt; }
+      .topbar, .print-button, .menu-toggle, .icon-link, footer { display: none !important; }
+      .shell { width: 100%; }
+      .hero { min-height: 0; padding: 24px 0; }
+      .portrait-wrap { width: 150px; animation: none; }
+      .section { padding: 24px 0; break-inside: avoid; }
+      .feature-project, .project-card, .education-row, .skill-group { break-inside: avoid; }
+      .feature-project, .project-card { border-color: #cbd1cc; }
+      .project-grid { grid-template-columns: 1fr 1fr; }
+      .project-visual { height: 185px; }
+      .project-visual.devices, .project-visual.phones { height: 230px; }
+      .phone-shell { max-height: 210px; }
+      .feature-visual { min-height: 250px; }
+      .contact { padding: 24px 0; }
+      a { text-decoration: none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+      .motion-ready .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="shell nav">
+      <a class="brand" href="#home"><span class="brand-mark" aria-hidden="true">WA</span><span class="brand-name">Wildan Ulul Aufa</span></a>
+      <div class="nav-right">
+        <nav class="nav-links" id="site-nav" aria-label="Navigasi utama">
+          <a href="#home">Beranda</a><a href="#proyek">Proyek</a><a href="#profil">Profil</a><a href="#keahlian">Keahlian</a><a href="#kontak">Kontak</a>
+        </nav>
+        <div class="nav-tools">
+          <a class="icon-link" href="#proyek">Portofolio</a>
+          <button class="print-button" type="button" onclick="window.print()">Simpan PDF</button>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section class="hero reveal" id="home">
+      <div class="hero-copy-wrap">
+        <p class="eyebrow">CV Digital · Teknik Komputer</p>
+        <h1>Wildan Ulul Aufa</h1>
+        <p class="hero-title">IoT · Aplikasi Web · Android Native</p>
+        <p class="hero-copy">Lulusan Teknik Komputer dengan pengalaman mengembangkan aplikasi web dan Android, serta merancang sistem IoT dari perangkat hingga visualisasi data.</p>
+        <div class="hero-actions">
+          <a class="button-primary" href="#proyek">Lihat proyek</a>
+          <a class="hero-link" href="#kontak">Hubungi saya</a>
+        </div>
+      </div>
+      <div class="portrait-wrap" aria-label="Foto Wildan Ulul Aufa">
+        <img class="portrait" src="assets/wildan-portrait.jpeg" alt="Wildan Ulul Aufa">
+      </div>
+    </section>
+
+    <div class="focus-row reveal" aria-label="Fokus dan lokasi">
+      <div class="focus-item"><strong>IoT & perangkat</strong>ESP32 · RFID · ESP8266</div>
+      <div class="focus-item"><strong>Aplikasi</strong>Web · Android · Google Sheets</div>
+      <div class="focus-item"><strong>Lokasi</strong>Wonosobo / Yogyakarta</div>
+    </div>
+
+    <section class="section reveal" id="proyek">
+      <div class="section-head">
+        <div><p class="section-kicker">Case studies</p><h2>Proyek pilihan</h2></div>
+        <p class="section-note">Skripsi, magang, dan proyek mandiri yang memperlihatkan cara saya membangun dan menguji solusi.</p>
+      </div>
+
+      <article class="feature-project reveal">
+        <div class="feature-visual"><img src="assets/simonta-hasil-analisis.jpeg" alt="Tampilan alat SIMONTA saat menganalisis kondisi tanah dan memberikan rekomendasi pemupukan"></div>
+        <div class="feature-copy">
+          <p class="project-label">01 · Proyek skripsi · 2026</p>
+          <h3>SIMONTA — Sistem Monitoring Hara Tanah</h3>
+          <p>Merancang sistem portabel untuk memantau kondisi hara tanah dan menyajikan rekomendasi pemupukan presisi. Sistem menggabungkan perangkat IoT dan Web SIG untuk pemetaan hasil di Kecamatan Sapuran, Kabupaten Wonosobo.</p>
+          <dl class="feature-meta">
+            <dt>Perangkat</dt><dd>ESP32 Wrover · sensor NPK · GPS</dd>
+            <dt>Firmware</dt><dd>C/C++ · Arduino IDE · penyimpanan offline</dd>
+            <dt>Visualisasi</dt><dd>Web SIG · data spasial · rekomendasi</dd>
+          </dl>
+        </div>
+      </article>
+
+      <div class="project-grid">
+        <article class="project-card reveal">
+          <div class="project-visual devices">
+            <img class="desktop-screen" src="assets/kominfo-admin-preview.jpg" alt="Dashboard admin aplikasi manajemen pondok pesantren">
+            <div class="phone-shell"><img src="assets/kominfo-mobile-full.jpg" alt="Layar penuh aplikasi pesantren di ponsel dengan identitas santri disamarkan"></div>
+          </div>
+          <div class="project-copy">
+            <p class="project-label">02 · Magang Kominfo · Semester 6</p>
+            <h3>Aplikasi Manajemen Pondok Pesantren</h3>
+            <p>Mengembangkan aplikasi administrasi pondok dengan dashboard admin dan modul pengelolaan santri, ustadz, wali santri, kelas, kitab, jadwal, asrama, pembayaran, perizinan, kehadiran, dan nilai.</p>
+            <div class="project-stack">Dashboard admin · Manajemen data · Web dan ponsel</div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-visual single"><img src="assets/sppg-dashboard-preview.jpg" alt="Dashboard presensi SPPG dengan data pegawai disamarkan"></div>
+          <div class="project-copy">
+            <p class="project-label">03 · Magang di dapur · Semester 7</p>
+            <h3>Sistem Presensi RFID SPPG</h3>
+            <p>Mengembangkan presensi menggunakan RFID dan ESP8266, dengan Google Sheets sebagai penyimpanan data. Dashboard menampilkan log real-time, rekap durasi, pencatatan manual, dan ekspor laporan.</p>
+            <div class="project-stack">RFID · ESP8266 · Google Sheets · Dashboard web</div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-visual phones">
+            <div class="phone-shell"><img src="assets/outlet-app-full.jpg" alt="Layar penuh aplikasi outlet dengan identitas dan ringkasan disamarkan"></div>
+            <div class="phone-shell"><img src="assets/outlet-monitor-full.jpg" alt="Layar penuh monitoring outlet dengan angka dan informasi pegawai disamarkan"></div>
+          </div>
+          <div class="project-copy">
+            <p class="project-label">04 · Proyek mandiri</p>
+            <h3>Aplikasi Presensi dan Pelaporan Outlet</h3>
+            <p>Membuat aplikasi Android untuk presensi berbasis lokasi dan pelaporan operasional outlet, dengan alur yang mendukung pencatatan saat koneksi terbatas.</p>
+            <div class="project-stack">Kotlin · Google Apps Script · Google Sheets</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section reveal" id="profil">
+      <div class="profile-grid">
+        <div><p class="section-kicker">Tentang saya</p><h2>Profil</h2></div>
+        <div>
+          <p class="profile-lead">Terbiasa mengubah kebutuhan menjadi sistem yang bisa diuji dan digunakan.</p>
+          <p class="profile-body">Selama kuliah, magang, dan mengerjakan proyek mandiri, saya belajar memahami alur kerja pengguna, membangun fitur, memeriksa hasil, serta mencatat dan memperbaiki temuan. Saya tertarik pada pekerjaan teknis maupun operasional yang membutuhkan ketelitian, tanggung jawab, dan kerja sama.</p>
+          <p class="profile-body">Saya siap mempelajari prosedur kerja baru, bekerja sesuai arahan, dan berkontribusi dalam tim.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="keahlian">
+      <div class="section-head"><div><p class="section-kicker">Kemampuan</p><h2>Keahlian</h2></div></div>
+      <div class="skills-grid">
+        <div class="skill-group"><h3>Perangkat & IoT</h3><p>ESP32 Wrover · ESP8266<br>RFID · Arduino IDE · C/C++<br>Sensor NPK · GPS · perakitan dan pengujian</p></div>
+        <div class="skill-group"><h3>Pengembangan</h3><p>Kotlin · Android Native<br>PHP · Laravel · Python · JavaScript<br>Web SIG · Google Apps Script</p></div>
+        <div class="skill-group"><h3>Data & kerja tim</h3><p>MySQL · Google Sheets<br>Dokumentasi teknis · pemecahan masalah<br>Teliti · kolaboratif · mau belajar</p></div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="pendidikan">
+      <div class="section-head"><div><p class="section-kicker">Latar belakang</p><h2>Pendidikan</h2></div></div>
+      <div class="education-row">
+        <div class="education-year">2022 — 2026</div>
+        <div>
+          <h3>Universitas Nahdlatul Ulama Yogyakarta</h3>
+          <p>S1 Teknik Komputer · Fakultas Teknologi Informasi</p>
+          <p>Skripsi: Perancangan Sistem Monitoring Hara Tanah Portabel Berbasis IoT dan Web SIG untuk Rekomendasi Pemupukan Presisi di Kecamatan Sapuran Kabupaten Wonosobo.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact reveal" id="kontak">
+      <div><p class="section-kicker">Kontak</p><h2>Terbuka untuk kesempatan kerja yang sesuai.</h2></div>
+      <div class="contact-grid">
+        <div class="contact-item"><span>Domisili</span><strong>Wonosobo / Yogyakarta</strong></div>
+        <div class="contact-item"><span>WhatsApp</span><a href="https://wa.me/6281215430648" target="_blank" rel="noopener noreferrer"><strong>0812 1543 0648</strong></a></div>
+        <div class="contact-item"><span>Email</span><a href="mailto:ulul4ufa@gmail.com"><strong>ulul4ufa@gmail.com</strong></a></div>
+        <div class="contact-item"><span>GitHub</span><a href="https://github.com/wildantech" target="_blank" rel="noopener noreferrer"><strong>github.com/wildantech</strong></a></div>
+        <div class="contact-item"><span>Instagram</span><a href="https://instagram.com/wil.dan.ulul" target="_blank" rel="noopener noreferrer"><strong>@wil.dan.ulul</strong></a></div>
+      </div>
+    </section>
+  </main>
+  <footer>Wildan Ulul Aufa · Portofolio</footer>
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const nav = document.querySelector("#site-nav");
+    menuToggle.addEventListener("click", () => {
+      const open = menuToggle.getAttribute("aria-expanded") !== "true";
+      menuToggle.setAttribute("aria-expanded", String(open));
+      nav.classList.toggle("is-open", open);
+    });
+    nav.addEventListener("click", (event) => {
+      if (event.target.closest("a")) {
+        menuToggle.setAttribute("aria-expanded", "false");
+        nav.classList.remove("is-open");
+      }
+    });
+    if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      document.documentElement.classList.add("motion-ready");
+      const observer = new IntersectionObserver((entries, currentObserver) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            currentObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: "0px 0px -35px 0px" });
+      document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
+    }
+  </script>
+</body>
+</html>
