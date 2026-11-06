@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Curriculum Vitae Wildan Ulul Aufa">
+  <title>CV — Wildan Ulul Aufa</title>
+  <style>
+    :root{--ink:#17211b;--muted:#536057;--accent:#527a35;--line:#dce3dc;--paper:#fff;--soft:#f4f7f3}
+    *{box-sizing:border-box}
+    body{margin:0;background:#edf1ed;color:var(--ink);font:14px/1.48 Arial,Helvetica,sans-serif}
+    .toolbar{position:sticky;top:0;z-index:2;display:flex;justify-content:center;gap:12px;padding:12px;background:#17211b}
+    .toolbar a,.toolbar button{border:1px solid #82917f;border-radius:24px;padding:9px 17px;background:transparent;color:#fff;font-size:13px;text-decoration:none;cursor:pointer}
+    .toolbar button{border-color:#c5f36b;background:#c5f36b;color:#17211b;font-weight:700}
+    .sheet{width:min(210mm,calc(100% - 32px));min-height:297mm;margin:24px auto;padding:17mm 18mm;background:var(--paper);box-shadow:0 8px 35px #17211b18}
+    h1{margin:0 0 4px;font-size:25px;letter-spacing:.3px}
+    .headline{margin:0 0 9px;color:var(--accent);font-size:12px;font-weight:700}
+    .contact{padding-bottom:12px;border-bottom:2px solid var(--ink);color:var(--muted);font-size:10.5px;line-height:1.7}
+    h2{margin:14px 0 6px;padding-bottom:4px;border-bottom:1px solid var(--line);color:var(--accent);font-size:11px;letter-spacing:1px}
+    p{margin:0 0 5px}
+    .summary{font-size:11px;line-height:1.55}
+    .entry{margin:0 0 8px}
+    .entry h3{margin:0;font-size:11.5px;line-height:1.4}
+    .meta{margin:1px 0 3px;color:var(--muted);font-size:10px;font-style:italic}
+    .entry p:last-child{font-size:10.5px;line-height:1.45}
+    .education{display:flex;justify-content:space-between;gap:14px;font-size:10.5px}
+    .thesis{margin-top:4px;font-size:10px}
+    .skills{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+    .skill{padding:7px 9px;background:var(--soft);border:1px solid var(--line);font-size:10px}
+    .skill strong{display:block;margin-bottom:2px;color:var(--ink)}
+    .footnote{margin-top:8px;color:var(--muted);font-size:9px}
+    @media(max-width:600px){.sheet{width:100%;min-height:0;margin:0;padding:22px 20px;box-shadow:none}.skills{grid-template-columns:1fr}.toolbar{position:static}}
+    @page{size:A4;margin:0}
+    @media print{
+      body{background:#fff;font-size:11px}
+      .toolbar{display:none!important}
+      .sheet{width:210mm;min-height:297mm;margin:0;padding:14mm 17mm;box-shadow:none}
+      h2{margin-top:11px}
+      .entry{margin-bottom:6px}
+      a{color:inherit;text-decoration:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <a href="index.html">← Kembali ke portofolio</a>
+    <button type="button" onclick="window.print()">Unduh CV / Simpan PDF</button>
+  </div>
+  <main class="sheet">
+    <header>
+      <h1>WILDAN ULUL AUFA</h1>
+      <p class="headline">Lulusan Teknik Komputer | Web &amp; Android Development | IoT</p>
+      <div class="contact">
+        Wonosobo / Yogyakarta · 0812 1543 0648 · ulul4ufa@gmail.com<br>
+        GitHub: github.com/wildantech · Portofolio: github.com/wildantech/profile
+      </div>
+    </header>
+
+    <section>
+      <h2>PROFIL</h2>
+      <p class="summary">Lulusan S1 Teknik Komputer dengan pengalaman proyek akademik, magang, dan mandiri dalam pengembangan aplikasi web dan Android serta perancangan sistem IoT. Terbiasa mengembangkan fitur aplikasi, mengintegrasikan perangkat dan sensor, mengelola data, serta melakukan pengujian dan dokumentasi. Memiliki minat pada pengembangan solusi digital yang praktis, pemecahan masalah, dan kolaborasi tim.</p>
+    </section>
+
+    <section>
+      <h2>PENGALAMAN &amp; PROYEK RELEVAN</h2>
+      <article class="entry">
+        <h3>Pengembangan Aplikasi Manajemen Pondok Pesantren</h3>
+        <p class="meta">Pengalaman magang — Kominfo · Semester 6</p>
+        <p>Mengembangkan aplikasi administrasi pondok dengan dashboard admin dan modul pengelolaan data santri, ustadz, wali santri, kelas, kitab, jadwal, asrama, pembayaran, perizinan, kehadiran, dan nilai. Berkontribusi pada pengembangan alur pengelolaan data dan antarmuka web/mobile.</p>
+      </article>
+      <article class="entry">
+        <h3>Sistem Presensi RFID SPPG</h3>
+        <p class="meta">Pengalaman magang · Semester 7</p>
+        <p>Mengembangkan sistem presensi menggunakan RFID dan ESP8266 dengan Google Sheets sebagai penyimpanan data. Dashboard menyediakan log real-time, rekap durasi, pencatatan manual, serta ekspor laporan.</p>
+      </article>
+      <article class="entry">
+        <h3>SIMONTA — Sistem Monitoring Hara Tanah</h3>
+        <p class="meta">Proyek skripsi · 2026</p>
+        <p>Merancang sistem portabel berbasis IoT dan Web SIG untuk pemantauan kondisi hara tanah serta penyajian rekomendasi pemupukan presisi di Kecamatan Sapuran, Kabupaten Wonosobo. Mengintegrasikan ESP32, sensor NPK, GPS, dan pemetaan berbasis web.</p>
+      </article>
+      <article class="entry">
+        <h3>Aplikasi Presensi dan Pelaporan Outlet</h3>
+        <p class="meta">Proyek mandiri</p>
+        <p>Membangun aplikasi Android untuk presensi berbasis lokasi dan pelaporan operasional outlet, dengan integrasi Google Apps Script dan Google Sheets serta alur pencatatan yang mendukung kondisi koneksi terbatas.</p>
+      </article>
+    </section>
+
+    <section>
+      <h2>PENDIDIKAN</h2>
+      <div class="education">
+        <div><strong>S1 Teknik Komputer</strong><br>Universitas Nahdlatul Ulama Yogyakarta — Fakultas Teknologi Informasi</div>
+        <strong>2022–2026</strong>
+      </div>
+      <p class="thesis"><strong>Topik skripsi:</strong> Perancangan Sistem Monitoring Hara Tanah Portabel Berbasis IoT dan Web SIG untuk Rekomendasi Pemupukan Presisi di Kecamatan Sapuran, Kabupaten Wonosobo.</p>
+    </section>
+
+    <section>
+      <h2>KETERAMPILAN</h2>
+      <div class="skills">
+        <div class="skill"><strong>Pengembangan</strong>Kotlin, Android Native, PHP, Laravel, Python, JavaScript, Web SIG</div>
+        <div class="skill"><strong>IoT &amp; perangkat</strong>ESP32 Wrover, ESP8266, RFID, Arduino IDE, C/C++, sensor NPK, GPS</div>
+        <div class="skill"><strong>Data &amp; integrasi</strong>MySQL, Google Sheets, Google Apps Script</div>
+        <div class="skill"><strong>Pendukung</strong>Dokumentasi teknis, pengujian, pemecahan masalah, kolaborasi</div>
+      </div>
+    </section>
+    <p class="footnote">Referensi proyek dan informasi lebih lanjut tersedia pada halaman portofolio.</p>
+  </main>
+</body>
+</html>
